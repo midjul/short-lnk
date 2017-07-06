@@ -2,7 +2,7 @@ import React from "react";
 import { Accounts } from "meteor/accounts-base";
 import { Links } from '../api/links';
 import LinksList from './LinksList';
-import {Meteor} from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 
 class Link extends React.Component {
   constructor() {
@@ -17,7 +17,7 @@ class Link extends React.Component {
     const url = this.refs.url.value.trim();
 
     if (url) {
-      Links.insert({ url, userId: Meteor.userId() });
+      Meteor.call('links.insert', url);
       this.refs.url.value = '';
     }
   }
