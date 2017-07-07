@@ -13,6 +13,7 @@ Tracker.autorun(() => {
   console.log('links', links);
 });
 
+
 Meteor.startup(() => {
   ReactDOM.render(routes, document.getElementById("app"));
 });
