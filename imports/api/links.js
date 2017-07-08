@@ -48,7 +48,8 @@ Meteor.methods({
       }
     }).validate({_id, visible})
 
-    Links.update({'_id':_id, 'userId':this.userId}, {$set:{'visible':visible}})
+    Links.update({'_id':_id, 'userId':this.userId},
+     {$set:{'visible':visible}})
   }
 });
 
