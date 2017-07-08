@@ -28,10 +28,27 @@ Meteor.methods({
       }
     }).validate({ url })
     Links.insert({
-      _id:shortid.generate(),
+      _id: shortid.generate(),
       url,
-      userId: this.userId
+      userId: this.userId,
+      visible: true
     })
+  },
+'links.setVisibility'(_id, visible) {
+    if (!this.userId)
+      throw new Meteor.Error('not-authorized');
+
+    new SimpleSchema({
+      _id: {
+        type: String,
+        min: 1
+      },
+      visible: {
+        type: Boolean
+      }
+    }).validate({_id, visible})
+
+    Links.update({'_id':_id, 'userId':this.userId}, {$set:{'visible':visible}})
   }
 });
 
