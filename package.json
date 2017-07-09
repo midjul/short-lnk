@@ -1,6 +1,7 @@
 {
   "name": "short-link",
   "private": true,
+  "version": "0.1.1",
   "scripts": {
     "start": "meteor run"
   },
@@ -9,6 +10,7 @@
     "bcrypt": "^1.0.2",
     "clipboard": "^1.5.16",
     "meteor-node-stubs": "~0.2.0",
+    "moment": "^2.17.1",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
