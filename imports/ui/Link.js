@@ -8,9 +8,11 @@ const Link = () => {
   return (
     <div>
       <PrivateHeader title="Your Links" />
-      <LinksListFilter />
-      <AddLink />
-      <LinksList />
+      <div className="page-content">
+        <LinksListFilter />
+        <AddLink />
+        <LinksList />
+      </div>
     </div>
   );
 }
