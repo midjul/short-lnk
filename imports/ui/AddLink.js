@@ -37,7 +37,7 @@ class AddLink extends React.Component {
 
         return (
             <div>
-                <button onClick={() => this.setState({ isOpen: true })}>+ Add Link</button>
+                <button className="button" onClick={() => this.setState({ isOpen: true })}>+ Add Link</button>
                 <Modal
                     isOpen={this.state.isOpen}
                     contentLabel="Add link"
